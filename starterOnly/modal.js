@@ -32,4 +32,3 @@ function closeModal(){
 // close modal event
 close.addEventListener("click", closeModal);
 
-

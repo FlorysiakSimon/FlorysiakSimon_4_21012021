@@ -80,18 +80,16 @@
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
-                <span class="formErrorText" id="errorBirthday">Veuillez saisir un nombre de tournois.</span>
+                <input type="number" class="text-control" id="quantity" name="quantity" pattern="[0-9]" min="0" max="99">
+                <span class="formErrorText" id="errorTournament">Veuillez saisir un nombre de tournois entre 0 et 99.</span>
               </div>
               <p class="text-label">Quelles villes ?</p>
               <span class="formErrorText" id="errorLocation">Vous devez choisir une option.</span>
-              <div
-                class="formData">
+              <div class="formData">
                 <input class="checkbox-input" type="radio" id="location1" name="location" value="New York"/>
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
-                  New York</label
-                >
+                  New York</label>
                 <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco"/>
                 <label class="checkbox-label" for="location2">
                   <span class="checkbox-icon"></span>
@@ -119,22 +117,22 @@
                 >
               </div>
 
-              <div
-                class="formData">
+              <div class="formData">
                 <input  class="checkbox-input" type="checkbox" id="checkbox1" checked/>
                 <label class="checkbox2-label" for="checkbox1" >
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
+                <span class="formErrorText" id="errorCheckbox">Veuillez acceptez les conditions d'utilisation.</span>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                   Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
-              <input class="btn-submit button" type="submit" onclick="return validate();" value="C'est parti"/>
+              <input class="btn-submit button" type="button" onclick="return validate();" value="C'est parti"/>
             </form>
             <div class="modalValid">
               <p class="modalValidText">Merci! Votre réservation a été reçue.</p>

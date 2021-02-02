@@ -60,6 +60,7 @@ function validateEmail(){
 //verify if location is checked
 function verifyLocation(){
   var checked_location = document.querySelectorAll('input[name="location"]');
+  console.log(checked_location);
   var radio = 0;
   for (var i = 0; i < checked_location.length; i++) {
     if (checked_location[i].checked) {
@@ -80,7 +81,7 @@ function validate(){
 
   if (firstName.value.length < 2) {  // verify first name input has more than 2 characteres 
     document.getElementById('errorFirstName').style.display='block'; //display error message
-    firstName.focus();
+    firstName.focus(); // focus on input
     return false; 
   }else{
     console.log('prenom :', firstName.value); 
@@ -88,16 +89,16 @@ function validate(){
   }
 
   if (lastName.value.length < 2) {  //verify last name input has more than 2 characteres
-    document.getElementById('errorLastName').style.display='block'; 
+    document.getElementById('errorLastName').style.display='block'; //display error message
     lastName.focus();
     return false;
   }else{ 
     console.log('nom:' , lastName.value);
-    document.getElementById('errorLastName').style.display="none";
+    document.getElementById('errorLastName').style.display="none"; 
   }
   
   if(!validateEmail(mail)){  //verify mail format
-    document.getElementById('errorMail').style.display="block";
+    document.getElementById('errorMail').style.display="block"; //display error message
     mail.focus();
     return false;
   } else{
@@ -106,7 +107,7 @@ function validate(){
   }
 
   if (birthDate.value == "" ){ // verify date 
-    document.getElementById('errorBirthday').style.display='block'; 
+    document.getElementById('errorBirthday').style.display='block'; //display error message
     birthDate.focus();
     return false;
   }else{ 
@@ -124,21 +125,21 @@ function validate(){
   }
   
   if (verifyLocation()==false){ //verify a location is chosen 
-    document.getElementById('errorLocation').style.display='block'; 
+    document.getElementById('errorLocation').style.display='block'; //display error message
     return false;
   }else{ 
-    document.getElementById('errorLocation').style.display="none";
+    document.getElementById('errorLocation').style.display="none"; 
   }
  
   if(checkbox1.checked == false){ //verify terms and conditions is checked
-    document.getElementById('errorCheckbox').style.display="block";
+    document.getElementById('errorCheckbox').style.display="block"; //display error message
     return false;
   }else{ 
     document.getElementById('errorCheckbox').style.display="none";
   }
   
 
-modalForm.style.display ="none";
+modalForm.style.display ="none";  
 modalValid.style.display="block"; // FORM is valid
-
+event.preventDefault(); // avoid reload on submit
 }

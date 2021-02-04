@@ -117,7 +117,7 @@ function validate(){
 
   if(nbTournaments.value < 0 || nbTournaments.value > 99 || nbTournaments.value == "" ){  // verify tournaments number
     document.getElementById('errorTournament').style.display="block";
-    console.log(nbTournaments.value);
+    nbTournaments.focus();
     return false;
   }else{ 
     console.log('nombre de tournois:', nbTournaments.value);

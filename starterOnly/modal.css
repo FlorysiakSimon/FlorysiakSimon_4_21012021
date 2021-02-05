@@ -9,7 +9,9 @@
   padding: 0;
 }
 /* Landing Page */
-
+a {
+  text-decoration: none;
+}
 body {
   margin: 0;
   display: flex;
@@ -142,7 +144,7 @@ main {
 /* Modal form */
 
 .modalValid {
-  display: none;
+  display: block;
 }
 .modalValidText {
   font-size: 36px;
@@ -177,6 +179,18 @@ main {
 }
 
 .bground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.formValid {
   display: none;
   position: fixed;
   z-index: 1;
@@ -344,7 +358,7 @@ input[data-error]::after {
 .btn-signup {
   background: #fe142f;
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;

@@ -15,14 +15,14 @@ const close = document.querySelector(".close");
 const btnClose = document.querySelector(".btn-close");
 //DOM FORM Elements 
 const modalForm = document.querySelector(".modalForm");
-const firstName = document.getElementById("first");
-const lastName = document.getElementById("last"); 
-const mail = document.getElementById("email");
-const birthDate = document.getElementById("birthdate");
-const nbTournaments = document.getElementById("quantity");
-const checkbox1 = document.getElementById("checkbox1");
+const firstName = document.getElementById("first"); // prenom
+const lastName = document.getElementById("last"); // nom
+const mail = document.getElementById("email");// mail
+const birthDate = document.getElementById("birthdate"); // date de naissance
+const nbTournaments = document.getElementById("quantity"); // nombres de tournois
+const checkbox1 = document.getElementById("checkbox1"); // conditions d'utilisation
 const checkbox2 = document.getElementById("checkbox2");
-const modalValid = document.querySelector(".modalValid");
+const formValid = document.querySelector(".formValid"); // modal form valid
 
 
 // launch modal event
@@ -43,9 +43,6 @@ function closeModal(){
 // close modal event
 close.addEventListener("click", closeModal);
 btnClose.addEventListener("click", closeModal);
-
-
-
 
 //verify email 
 let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -77,9 +74,8 @@ function verifyLocation(){
 
 //check if FORM is valid
 function validate(){
- 
 
-  if (firstName.value.length < 2) {  // verify first name input has more than 2 characteres 
+  if (firstName.value.length < 2 || !firstName.value.match(/^([a-zA-Z]+)$/)) {  // verify first name input has more than 2 characters 
     document.getElementById('errorFirstName').style.display='block'; //display error message
     firstName.focus(); // focus on input
     return false; 
@@ -88,9 +84,9 @@ function validate(){
     document.getElementById('errorFirstName').style.display="none";
   }
 
-  if (lastName.value.length < 2) {  //verify last name input has more than 2 characteres
+  if (lastName.value.length < 2 || !lastName.value.match(/^([a-zA-Z]+)$/)) {  //verify last name input has more than 2 characters
     document.getElementById('errorLastName').style.display='block'; //display error message
-    lastName.focus();
+    lastName.focus(); 
     return false;
   }else{ 
     console.log('nom:' , lastName.value);
@@ -137,9 +133,8 @@ function validate(){
   }else{ 
     document.getElementById('errorCheckbox').style.display="none";
   }
-  
+}
 
-modalForm.style.display ="none";  
-modalValid.style.display="block"; // FORM is valid
-event.preventDefault(); // avoid reload on submit
+if(window.location.href.indexOf("?first=") > 1){ //verify get method on submit
+  formValid.style.display = "block"; //display validation message
 }

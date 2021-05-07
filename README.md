@@ -3,9 +3,11 @@
 ## Objectif :
 
 
--Forkez un dépot Git
--Corrigez les différentes Issues HTML/CSS et JavaScript
--Ne permettre la soumission du formulaire qui si tout les champs sont valides
+- Forkez un dépot Git
+
+- Corrigez les différentes Issues HTML/CSS et JavaScript
+
+- Ne permettre la soumission du formulaire qui si tout les champs sont valides
 
 
 

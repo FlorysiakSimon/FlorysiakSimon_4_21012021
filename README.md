@@ -1,5 +1,22 @@
-# Projet GameOn
-1. Forkez ce repo ;
-2. Il est conseillé d'utiliser VisualStudio Code et vous pouvez utiliser Docker, mais ce n'est pas obligatoire ;
-3. Il n'y a aucune dépendance ;
-4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
+# # GameOn
+
+## Objectif :
+
+
+-Forkez un dépot Git
+-Corrigez les différentes Issues HTML/CSS et JavaScript
+-Ne permettre la soumission du formulaire qui si tout les champs sont valides
+
+
+
+![Lien](https://user.oc-static.com/upload/2020/08/14/15974189716945_image2.png)
+
+
+## Technologies
+
+HTML / CSS / Javascript
+
+
+## Lien du projet : 
+
+[github-pages](https://florysiaksimon.github.io/FlorysiakSimon_4_21012021/starterOnly/)
